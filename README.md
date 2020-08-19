@@ -49,10 +49,10 @@ dict_keys(['y', 'x', 'note'])
 (1142626, 11)
 >>> data['x'][0][:8]        # source ip (first 4) and destination ip (last 4)
 array([ 198.,  115.,   14.,  163.,    1.,   91.,  194.,    1.])
->>> data['x'][0][8:10]      # source port and destination port
-array([     6.,  35059.])
->>> data['x'][0][-1]        # protocol type
-22.0
+>>> data['x'][0][8]         # protocol type
+6.0
+>>> data['x'][0][9:]        # source port and destination port
+array([35059.,    22.])
 >>> data['y'][0]            # number of packets
 153733
 ```
